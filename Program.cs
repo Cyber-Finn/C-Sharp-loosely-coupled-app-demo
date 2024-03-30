@@ -31,6 +31,9 @@ namespace DelegateEventsTest;
             newEncoding.MessageEncodedEvent -= sendEmail.subscriber;
             newEncoding.MessageEncodedEvent -= sw.subscriber;
             newEncoding.MessageEncodedEvent -= steamMessage.subscriber;
+            sw.messageSent += nfs.subscriber;
+            sendEmail.messageSent += nfs.subscriber;
+            steamMessage.messageSent += nfs.subscriber;
         }
     }
 
